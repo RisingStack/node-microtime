@@ -17,6 +17,7 @@
     "node": ">= 0.8.0"
   },
   "scripts": {
+    "preinstall": "node -e 'process.exit(0)'",
     "install": "node-pre-gyp install --fallback-to-build",
     "rebuild": "node-pre-gyp rebuild",
     "test": "node test.js",
@@ -25,11 +26,8 @@
   },
   "dependencies": {
     "nan": "^2.5.1",
-    "node-pre-gyp": "^0.6.34"
+    "@risingstack/node-pre-gyp": "^0.6.35"
   },
-  "bundledDependencies": [
-    "node-pre-gyp"
-  ],
   "devDependencies": {
     "aws-sdk": "^2.0.0",
     "clang-format": "^1.0.38",
